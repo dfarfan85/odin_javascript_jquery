@@ -7,16 +7,35 @@ h1 {
 	text-align: center;
 }
 
-div .square {
+div.square {
 	border: 1px solid black;
 	width: 50px;
 	height: 50px;
 	margin: 5px;
 	display: inline-block;
+	position: relative;
+	background-color:;
+	
 }
 
 div#container {
-	height: 1050px;
 	border: 2px dotted black;
-	margin: 5px;
+	margin: 5px auto;
+	display: block;
+	width: 996px;
 }
+
+#submit #butt {
+	margin: 0px 0px 0px 450px;
+	padding: 10px 25px;
+	font-size: 12px;
+	display: inline-block;
+
+}
+
+#submit {
+	border: 1px solid black;
+
+
+}
+
