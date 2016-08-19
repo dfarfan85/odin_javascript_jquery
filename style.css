@@ -20,7 +20,7 @@ div.square {
 }
 
 div#container {
-	border: 5px solid #ccffe6;
+	border: 15px solid #ccffe6;
 	margin: 0px auto;
 	display: block;
 	width: 500px;
@@ -29,17 +29,25 @@ div#container {
 	
 }
 
-#submit #butt {
+ button  {
 	padding: 10px 25px;
 	font-size: 12px;
 	display: block;
 	position: relative;
 	margin: 5px auto;
+
 }
 
 #submit {
 	border: 3px solid black;
 	margin: 1px auto;
 	position: relative;
+	text-align: center;
 }
 
+p {
+	margin: 10px;
+	padding: 0;
+	display: inline-block;
+
+}
