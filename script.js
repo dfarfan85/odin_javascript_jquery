@@ -3,6 +3,7 @@ $(document).ready(function() {
 	 makeGrid(16);
 	 numSquare();
 	 changeColor();
+	 randColor();
 
 	 function makeGrid(gridNum){
 		for(var row = 0; row < gridNum; row++){
@@ -21,13 +22,13 @@ $(document).ready(function() {
 	function addHover(){
 		$('.square').hover(
 			function(){
-				$(this).css('background-color', 'red');
+				$(this).css('background-color', '#00ff84');
 			},
 			function(){
-				$(this).css('background-color', 'red');
+				$(this).css('background-color', '#00ff84');
 			}
 		);
-}
+	}
 	
 	function numSquare(){	
 		$('.butt-squares').click(function(){
@@ -38,7 +39,7 @@ $(document).ready(function() {
 		});
 	}
 		
-	function changeColor(color){
+	function changeColor(){
 		$('.butt-color').click(function() {
 			input = prompt("Choose by typing either: blue, green, yellow, " + 
 				"or gray ");
@@ -56,8 +57,46 @@ $(document).ready(function() {
 					$('.square').css('background-color', input)
 					break;
 				default:
-					changeColor();
+					input = prompt("Please try again: blue, green, yellow, " + 
+				"or gray ");
+					$('.square').css('background-color', input);
+					break;
 			}
 		});
+	};
+
+	function randColor() {
+		$('.butt-rand').click(function(){
+			randomHover();
+		});
+	};
+			
+		
+		
+
+
+
+
+	function randomHover() {
+		$('.square').hover(function(){
+				$(this).css('background-color', randomcolor());
+		}, function(){
+				$(this).css('background-color', randomcolor());
+		});
+	};
+
+	/* This is not my function !! I borrowed it from Github user: sidgupta234 */
+	function randomcolor(){
+	var letters='123456789ABCDEF'.split('');
+	var color='#';
+	
+	for(var i=0;i<6;i++){
+		color += letters[Math.round(Math.random() * 15)];
+		
 	}
+	return color;
+	}
+	console.log(randomcolor());
+
+
 });
