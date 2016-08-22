@@ -72,11 +72,6 @@ $(document).ready(function() {
 	};
 			
 		
-		
-
-
-
-
 	function randomHover() {
 		$('.square').hover(function(){
 				$(this).css('background-color', randomcolor());
@@ -96,7 +91,6 @@ $(document).ready(function() {
 	}
 	return color;
 	}
-	console.log(randomcolor());
-
 
 });
+
